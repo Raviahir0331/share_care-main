@@ -1,0 +1,151 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Apply full-screen background image */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Apply the new font */
+    background: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&auto=format&fit=crop&q=80') no-repeat center center fixed;
+    background-size: cover;
+    overflow: auto;
+}
+
+/* Form container styles */
+.container-fluid.enhanced-form {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* Set form background color */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form title */
+.enhanced-donation-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* Form group styles */
+.enhanced-donation-form .form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styles */
+.enhanced-donation-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Input, select, and textarea styles */
+.enhanced-donation-form input[type="text"],
+.enhanced-donation-form input[type="email"],
+.enhanced-donation-form input[type="tel"],
+.enhanced-donation-form input[type="number"],
+.enhanced-donation-form input[type="file"],
+.enhanced-donation-form select,
+.enhanced-donation-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #333;
+    background-color: rgb(248, 249, 250);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Input focus animation */
+.enhanced-donation-form input:focus,
+.enhanced-donation-form select:focus,
+.enhanced-donation-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Checkbox styles */
+.enhanced-donation-form .checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.enhanced-donation-form .checkbox-label input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Button styles */
+.enhanced-donation-form .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Button hover and active states */
+.enhanced-donation-form .btn:hover {
+    background: linear-gradient(135deg, #0083b0, #00b4db);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.enhanced-donation-form .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button pop animation */
+@keyframes buttonPop {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .container-fluid.enhanced-form {
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.95); /* Maintain form contrast on mobile */
+    }
+
+    .enhanced-donation-form .btn {
+        font-size: 14px;
+    }
+}
